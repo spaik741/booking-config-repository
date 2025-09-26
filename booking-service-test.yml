@@ -4,3 +4,9 @@ spring:
       database: booking-store
       uri: mongodb://admin:password@mongodb:27017/
       auto-index-creation: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health
