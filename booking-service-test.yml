@@ -10,3 +10,13 @@ management:
     web:
       exposure:
         include: health
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://booking-discovery-service/eureka/
+    initial-instance-info-replication-interval-seconds: 5
+  instance:
+    lease-renewal-interval-in-seconds: 10
+    lease-expiration-duration-in-seconds: 10
+    prefer-ip-address: true
