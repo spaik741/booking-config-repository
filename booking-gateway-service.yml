@@ -4,13 +4,14 @@ server:
 spring:
   application:
     name: booking-gateway-service
-  gateway:
-    httpclient:
-      connect-timeout: 3000
-      response-timeout: 5s
-    routes:
-      - id: booking-service
-        uri: lb://booking-service
-        predicates:
-          - Path=/v1/client/**
-          - Path=/v1/record/**
+  cloud:
+    gateway:
+      httpclient:
+        connect-timeout: 3000
+        response-timeout: 5s
+      routes:
+        - id: booking-service
+          uri: lb://booking-service
+          predicates:
+            - Path=/v1/client/**
+            - Path=/v1/record/**
