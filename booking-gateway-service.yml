@@ -13,5 +13,5 @@ spring:
         - id: booking-service
           uri: lb://booking-service
           predicates:
-            - Path=/v1/client/**
-            - Path=/v1/record/**
+            - Path=/v1/client
+            - Path=/v1/record
