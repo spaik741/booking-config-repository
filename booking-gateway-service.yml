@@ -6,6 +6,10 @@ spring:
     name: booking-gateway-service
   cloud:
     gateway:
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
       httpclient:
         connect-timeout: 3000
         response-timeout: 5s
