@@ -14,4 +14,10 @@ management:
       exposure:
         include: "*"
 
+logging:
+  level:
+    root: INFO
+    org.springframework.cloud.gateway: DEBUG
+    com.netflix.loadbalancer: DEBUG
+
 
