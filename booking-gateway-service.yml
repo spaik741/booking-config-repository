@@ -6,16 +6,17 @@ spring:
     name: booking-gateway-service
   cloud:
     gateway:
-      discovery:
-        locator:
-          enabled: true
-          lower-case-service-id: true
+      server:
+        webflux:
+          discovery:
+            locator:
+              enabled: true
+              lower-case-service-id: true
+          routes:
+            - id: booking-service
+              uri: lb://booking-service
+              predicates:
+                - Path=/v1/client/**
       httpclient:
         connect-timeout: 3000
         response-timeout: 5s
-      routes:
-        - id: booking-service
-          uri: lb://booking-service
-          predicates:
-            - Path=/v1/client/**
-            - Path=/v1/record/**
