@@ -13,9 +13,9 @@ management:
     web:
       exposure:
         include: "*"
-  endpoint:
-    gateway:
-      access: true
+#  endpoint:
+#    gateway:
+#      access: true
   tracing:
     enabled: true
     sampling:
