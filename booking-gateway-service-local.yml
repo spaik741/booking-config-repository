@@ -15,7 +15,7 @@ management:
         include: "*"
   endpoint:
     gateway:
-      access: public
+      access: true
   tracing:
     enabled: true
     sampling:
